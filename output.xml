@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20231202 15:29:23.235" rpa="false" schemaversion="4">
+<suite id="s1" name="Test" source="/home/nataliya/Downloads/test">
+<suite id="s1-s1" name="0003 robot DDT reverse" source="/home/nataliya/Downloads/test/0003_robot_DDT_reverse.robot">
+<test id="s1-s1-t1" name="Reverse search for name: Saint Basil's Cathedral by lat: 55.7524736 and lon: 37.6231623872298" line="14">
+<kw name="Reverse Geocoding">
+<arg>Saint Basil's Cathedral</arg>
+<arg>55.7524736</arg>
+<arg>37.6231623872298</arg>
+<kw name="Rev Geocoding" library="lib">
+<var>${result}</var>
+<arg>${lat}</arg>
+<arg>${lon}</arg>
+<msg timestamp="20231202 15:29:23.643" level="INFO">https://nominatim.openstreetmap.org/reverse?lat=55.7524736&amp;lon=37.6231623872298
+{'place_id': 205968040, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'relation', 'osm_id': 3062911, 'lat': '55.75248795', 'lon': '37.62306308774352', 'class': 'place', 'type': 'house', 'place_rank': 30, 'importance': 0.45987880062645914, 'addresstype': 'place', 'name': "Saint Basil's Cathedral", 'display_name': "Saint Basil's Cathedral, 2, Red Square, 2, Kitay-gorod, Tverskoy District, Moscow, Central Federal District, 109012, Russia", 'address': {'place': "Saint Basil's Cathedral", 'house_number': '2', 'road': 'Red Square', 'quarter': '2', 'neighbourhood': 'Kitay-gorod', 'suburb': 'Tverskoy District', 'city': 'Moscow', 'ISO3166-2-lvl15': 'RU-MOW', 'state': 'Moscow', 'ISO3166-2-lvl4': 'RU-MOW', 'region': 'Central Federal District', 'postcode': '109012', 'country': 'Russia', 'country_code': 'ru'}, 'boundingbox': ['55.7523265', '55.7526395', '37.6227636', '37.6233507']}</msg>
+<msg timestamp="20231202 15:29:23.643" level="INFO">${result} = {'place_id': 205968040, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'relation', 'osm_id': 3062911, 'lat': '55.75248795', 'lon': '37.62306308774352',...</msg>
+<status status="PASS" starttime="20231202 15:29:23.315" endtime="20231202 15:29:23.643"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${result['name']}</arg>
+<arg>${name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231202 15:29:23.644" endtime="20231202 15:29:23.646"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:23.314" endtime="20231202 15:29:23.647"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:23.313" endtime="20231202 15:29:23.647"/>
+</test>
+<test id="s1-s1-t2" name="Reverse search for name: Eiffel Tower by lat: 48.8582599 and lon: 2.2945006358633115" line="14">
+<kw name="Reverse Geocoding">
+<arg>Eiffel Tower</arg>
+<arg>48.8582599</arg>
+<arg>2.2945006358633115</arg>
+<kw name="Rev Geocoding" library="lib">
+<var>${result}</var>
+<arg>${lat}</arg>
+<arg>${lon}</arg>
+<msg timestamp="20231202 15:29:29.572" level="INFO">https://nominatim.openstreetmap.org/reverse?lat=48.8582599&amp;lon=2.2945006358633115
+{'place_id': 115316817, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'way', 'osm_id': 5013364, 'lat': '48.8582599', 'lon': '2.2945006358633115', 'class': 'man_made', 'type': 'tower', 'place_rank': 30, 'importance': 0.5868325701744196, 'addresstype': 'man_made', 'name': 'Eiffel Tower', 'display_name': 'Eiffel Tower, 5, Avenue Anatole France, Quartier du Gros-Caillou, 7th Arrondissement, Paris, Ile-de-France, Metropolitan France, 75007, France', 'address': {'man_made': 'Eiffel Tower', 'house_number': '5', 'road': 'Avenue Anatole France', 'city_block': 'Quartier du Gros-Caillou', 'suburb': '7th Arrondissement', 'city_district': 'Paris', 'city': 'Paris', 'ISO3166-2-lvl6': 'FR-75', 'state': 'Ile-de-France', 'ISO3166-2-lvl4': 'FR-IDF', 'region': 'Metropolitan France', 'postcode': '75007', 'country': 'France', 'country_code': 'fr'}, 'boundingbox': ['48.8574753', '48.8590453', '2.2933119', '2.2956897']}</msg>
+<msg timestamp="20231202 15:29:29.572" level="INFO">${result} = {'place_id': 115316817, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'way', 'osm_id': 5013364, 'lat': '48.8582599', 'lon': '2.2945006358633115', 'cla...</msg>
+<status status="PASS" starttime="20231202 15:29:23.654" endtime="20231202 15:29:29.572"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${result['name']}</arg>
+<arg>${name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231202 15:29:29.573" endtime="20231202 15:29:29.576"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:23.653" endtime="20231202 15:29:29.576"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:23.648" endtime="20231202 15:29:29.577"/>
+</test>
+<test id="s1-s1-t3" name="Reverse search for name: Big Ben by lat: 51.5007042 and lon: -0.1245721" line="14">
+<kw name="Reverse Geocoding">
+<arg>Big Ben</arg>
+<arg>51.5007042</arg>
+<arg>-0.1245721</arg>
+<kw name="Rev Geocoding" library="lib">
+<var>${result}</var>
+<arg>${lat}</arg>
+<arg>${lon}</arg>
+<msg timestamp="20231202 15:29:29.845" level="INFO">https://nominatim.openstreetmap.org/reverse?lat=51.5007042&amp;lon=-0.1245721
+{'place_id': 276921554, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'node', 'osm_id': 1802652184, 'lat': '51.5007042', 'lon': '-0.1245721', 'class': 'tourism', 'type': 'attraction', 'place_rank': 30, 'importance': 0.5169301795209977, 'addresstype': 'tourism', 'name': 'Big Ben', 'display_name': 'Big Ben, Bridge Street, Westminster, Millbank, City of Westminster, Greater London, England, SW1A 2JX, United Kingdom', 'address': {'tourism': 'Big Ben', 'road': 'Bridge Street', 'quarter': 'Westminster', 'suburb': 'Millbank', 'city': 'City of Westminster', 'ISO3166-2-lvl8': 'GB-WSM', 'state_district': 'Greater London', 'state': 'England', 'ISO3166-2-lvl4': 'GB-ENG', 'postcode': 'SW1A 2JX', 'country': 'United Kingdom', 'country_code': 'gb'}, 'boundingbox': ['51.5006542', '51.5007542', '-0.1246221', '-0.1245221']}</msg>
+<msg timestamp="20231202 15:29:29.846" level="INFO">${result} = {'place_id': 276921554, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'node', 'osm_id': 1802652184, 'lat': '51.5007042', 'lon': '-0.1245721', 'class':...</msg>
+<status status="PASS" starttime="20231202 15:29:29.584" endtime="20231202 15:29:29.846"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${result['name']}</arg>
+<arg>${name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231202 15:29:29.846" endtime="20231202 15:29:29.849"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:29.583" endtime="20231202 15:29:29.849"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:29.578" endtime="20231202 15:29:29.849"/>
+</test>
+<test id="s1-s1-t4" name="Reverse search for name: Taj Mahal by lat: 27.1750075 and lon: 78.04210126365584" line="14">
+<kw name="Reverse Geocoding">
+<arg>Taj Mahal</arg>
+<arg>27.1750075</arg>
+<arg>78.04210126365584</arg>
+<kw name="Rev Geocoding" library="lib">
+<var>${result}</var>
+<arg>${lat}</arg>
+<arg>${lon}</arg>
+<msg timestamp="20231202 15:29:31.389" level="INFO">https://nominatim.openstreetmap.org/reverse?lat=27.1750075&amp;lon=78.04210126365584
+{'place_id': 243431352, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'way', 'osm_id': 375257537, 'lat': '27.1750075', 'lon': '78.04210126365584', 'class': 'tourism', 'type': 'attraction', 'place_rank': 30, 'importance': 0.548905688357262, 'addresstype': 'tourism', 'name': 'Taj Mahal', 'display_name': 'Taj Mahal, Taj East Gate Road, Taj Ganj, Agra, Agra District, Uttar Pradesh, 282004, India', 'address': {'tourism': 'Taj Mahal', 'road': 'Taj East Gate Road', 'suburb': 'Taj Ganj', 'city': 'Agra', 'state_district': 'Agra District', 'state': 'Uttar Pradesh', 'ISO3166-2-lvl4': 'IN-UP', 'postcode': '282004', 'country': 'India', 'country_code': 'in'}, 'boundingbox': ['27.1745358', '27.1754823', '78.0415593', '78.0426212']}</msg>
+<msg timestamp="20231202 15:29:31.389" level="INFO">${result} = {'place_id': 243431352, 'licence': 'Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright', 'osm_type': 'way', 'osm_id': 375257537, 'lat': '27.1750075', 'lon': '78.04210126365584', 'cl...</msg>
+<status status="PASS" starttime="20231202 15:29:29.857" endtime="20231202 15:29:31.389"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${result['name']}</arg>
+<arg>${name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231202 15:29:31.389" endtime="20231202 15:29:31.390"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:29.855" endtime="20231202 15:29:31.390"/>
+</kw>
+<status status="PASS" starttime="20231202 15:29:29.851" endtime="20231202 15:29:31.390"/>
+</test>
+<status status="PASS" starttime="20231202 15:29:23.253" endtime="20231202 15:29:31.391"/>
+</suite>
+<status status="PASS" starttime="20231202 15:29:23.237" endtime="20231202 15:29:31.391"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="0003 robot DDT reverse">Test.0003 robot DDT reverse</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
